@@ -17,21 +17,33 @@ public class peminjamanbuku {
 
     public void tambahBuku() {
         Scanner sc = new Scanner(System.in);
-
-        System.out.print("Masukkan kode buku: ");
-        kodeBuku.add(sc.nextLine());
-
+        String kode;
+        
+        // Cek agar kode buku tidak boleh sama
+        while (true) {
+            System.out.print("Masukkan kode buku: ");
+            kode = sc.nextLine();
+        
+            if (kodeBuku.contains(kode)) {
+                System.out.println("Kode buku sudah ada! Silakan masukkan kode lain.");
+            } else {
+                kodeBuku.add(kode);
+                break;
+            }
+        }
+    
         System.out.print("Masukkan judul buku: ");
         judulBuku.add(sc.nextLine());
-
+    
         System.out.print("Masukkan nama peminjam: ");
         namaPeminjam.add(sc.nextLine());
-
+    
         System.out.print("Masukkan lama pinjam (hari): ");
         lamaPinjam.add(sc.nextInt());
-
+    
         System.out.println("Buku berhasil ditambahkan.");
     }
+
 
     public void ubahData() {
         Scanner sc = new Scanner(System.in);

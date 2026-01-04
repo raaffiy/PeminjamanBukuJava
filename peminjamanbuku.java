@@ -15,6 +15,7 @@ public class peminjamanbuku {
         lamaPinjam = new ArrayList<>();
     }
 
+    // menu 1
     public void tambahBuku() {
         Scanner sc = new Scanner(System.in);
         System.out.print("\nBerapa buku yang ingin ditambahkan: ");
@@ -53,6 +54,7 @@ public class peminjamanbuku {
         }
     }
 
+    // menu 2
     public void ubahData() {
         Scanner sc = new Scanner(System.in);
         System.err.println("\n=============================");
@@ -77,6 +79,7 @@ public class peminjamanbuku {
         }
     }
 
+    // menu 3
     public void tampilData() {
         System.out.println("\n=== DAFTAR BUKU PINJAMAN ===");
         for (int i = 0; i < kodeBuku.size(); i++) {
@@ -89,6 +92,7 @@ public class peminjamanbuku {
         }
     }
 
+    // menu 4
     public void hapusBuku() {
         Scanner sc = new Scanner(System.in);
         System.err.println("\n=============================");
@@ -107,6 +111,7 @@ public class peminjamanbuku {
         }
     }
 
+    // menu 5
     public void hitungDenda() {
         Scanner sc = new Scanner(System.in);
         System.err.println("\n=============================");
@@ -127,6 +132,7 @@ public class peminjamanbuku {
         }
     }
 
+    // daftar menu
     public void menu() {
         Scanner sc = new Scanner(System.in);
         int pilih;
